@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .container{
+                 background-color: blueviolet;
+                 height: 700px;
+                 width: 50%;
+                 display:flex;
+                 justify-content: center;
+                 margin: auto;
+            
+        }
+        table{
+             background-color: rgb(235, 179, 210);
+             height: 400px;
+            width: 400px;
+            margin: auto;
+            margin-top: 100px;
+           
+
+        }
+        #search{
+            background-color: blueviolet;
+            margin: 20px 20px;
+            padding: 10px 10px;
+        }
+         tr td{
+            padding: 4px 4px;
+            margin: 2px;
+            background-color: rgb(248, 153, 227);
+            justify-content: center;
+            align-items: center;
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="down">
+            <table>
+                <tr>
+                   <th id="search" colspan="4"></th>
+                </tr>
+                <tr>
+                    <td onClick="append(this.innerHTML)">1</td>
+                    <td onClick="append(this.innerHTML)">2</td>
+                    <td onClick="append(this.innerHTML)">3</td>
+                    <td onClick="append(this.innerHTML)">4</td>
+                </tr>
+                <tr>
+                    <td onClick="append(this.innerHTML)">5</td>
+                    <td onClick="append(this.innerHTML)">6</td>
+                    <td onClick="append(this.innerHTML)">7</td>
+                    <td onClick="append(this.innerHTML)">8</td>
+
+                </tr>
+                <tr>
+                    <td onClick="append(this.innerHTML)">9</td>
+                    <td onClick="append(this.innerHTML)">0</td>
+                    <td onClick="append(this.innerHTML)">-</td>
+                    <td onClick="append(this.innerHTML)">+</td>
+                </tr>
+                <tr>
+                    <td onClick="append(this.innerHTML)">*</td>
+                    <td onClick="append(this.innerHTML)">/</td>
+                    <td onClick="cal()">=</td>
+                    <td onClick="append(this.innerHTML)">x</td>
+                </tr>
+                <tr>
+                    <th id="delete" colspan="4" onClick="erase()">DEL</th>
+                 </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+          function append(digit){
+            document.getElementById("search").innerHTML = document.getElementById("search").innerHTML + digit
+                       
+          }
+          function cal(){
+            document.getElementById("search").innerHTML = eval(document.getElementById("search").innerHTML)
+            
+          }
+          function erase(){
+            document.getElementById("search").innerHTML = ''
+          }
+    </script>
+</body>
+</html>
