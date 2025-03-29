@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Transformation</title>
+    <link rel="stylesheet" href="jsproject2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Array Transformation</h1>
+        
+        <label for="arrayInput">Enter an array (comma-separated):</label>
+        <input type="text" id="arrayInput" placeholder="e.g., 1,2,3">
+        
+        <label for="transformation">Select a transformation:</label>
+        <select id="transformation">
+            <option value="plusOne">Increase each by 1</option>
+            <option value="plusI">Increase by index</option>
+            <option value="constant">Set each to 42</option>
+        </select>
+
+        <button id="transformButton">Transform Array</button>
+
+        <h2>Transformed Array:</h2>
+        <p id="output"></p>
+    </div>
+
+    <script src="jsproject2.js"></script>
+</body>
+</html>
